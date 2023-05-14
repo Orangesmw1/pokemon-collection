@@ -58,9 +58,13 @@ const App:React.FC = () => {
       <div className="container">
         <header className="pokemon-header">Pokemon Colletion</header>
         <PokemonCollection listPoke ={listPoke} viewDetail={viewDetail} setDetail={setDetail} />
-        <div className="btn">
+
+        {!viewDetail.isOpened && (
+          <div className="btn">
           <button onClick={nextPage}>{loading ? "Loading..." : "Load more"}</button>
         </div>
+        )}
+        
       </div>
     </div> 
   );

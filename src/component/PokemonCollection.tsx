@@ -25,7 +25,7 @@ const PokemonCollection:React.FC<Props> = (props) => {
     }
 
   return (
-    <div>
+    <>
         <section className={viewDetail.isOpened ? "collection-container-active" : "collection-container"}>
         {viewDetail.isOpened && (
             <div className="overlay">
@@ -45,7 +45,7 @@ const PokemonCollection:React.FC<Props> = (props) => {
                 </div>
             })}
         </section>
-    </div>
+    </>
   )
 }
 
